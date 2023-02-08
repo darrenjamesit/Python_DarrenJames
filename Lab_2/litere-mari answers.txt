@@ -1,0 +1,7 @@
+Line 2: An error occurred because line 2 was indented less than 4 spaces, fixed by deleting the single space
+Line 4: This results in "list index out of range", this is because the last iteration my_list[8] does not exist since
+the final iteration will be my_list[7] since indexes start at [0] not [1], fixed by changing "<=" to "<"
+Line 5: The expression gives a weak warning about syntax, fixed by writing in short hand
+Line 7: The expression "i += 1" should be written within the "while" loop or the loop will not move past my_list[0] and print 'A'repeatedly
+Line 8: The "break" is not necessary
+Line 9: Weak warning that there is no newline at the end

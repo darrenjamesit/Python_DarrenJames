@@ -1,0 +1,8 @@
+Premiu                   Elev                          Media
+------------------------------------------------------------
+1                        Bengescu Hortensia              9.0
+2                        Vasilescu Vasile                8.5
+3                        Ionescu Geta                    8.2
+4                        Radulescu Ioana                 6.8
+5                        Popescu Ion                     4.7
+6                        Georgescu Gelu                  3.0

@@ -1,0 +1,1 @@
+print("XlsxWriter successfully installed!")

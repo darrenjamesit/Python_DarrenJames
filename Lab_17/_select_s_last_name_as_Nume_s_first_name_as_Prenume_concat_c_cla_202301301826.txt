@@ -1,0 +1,7 @@
+|Nume    |Prenume|Clasa|
+|--------|-------|-----|
+|Gherman |Herman |9b   |
+|McDoogle|Walter |8a   |
+|Pop     |Ion    |9b   |
+|Smart   |James  |10f  |
+|Weasley |Sean   |10f  |
