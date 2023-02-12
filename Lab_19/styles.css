@@ -25,3 +25,35 @@ width: 200px;
     border:1px solid gray;
     text-align: center;
 }
+
+table, td  {
+    border:1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+    white-space:nowrap;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td {
+    width: 100px;
+}
+
+.mod {
+    width: 100px;
+    height: 33px;
+    color: white;
+    background-color: royalblue;
+}
+
+.ste {
+    width: 100px;
+    height: 33px;
+    color: white;
+    background-color: firebrick;
+}
+
+h2 {
+text-align:center;
+}
