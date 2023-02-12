@@ -57,3 +57,10 @@ td {
 h2 {
 text-align:center;
 }
+
+.a {
+color: green;
+text-decoration: none;
+}
+
+.a:hover { color: orange; font-weight: bold; text-decoration: underline;}
