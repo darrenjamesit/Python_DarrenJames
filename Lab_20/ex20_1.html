@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <title>Username Password</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
+    <script type="text/javascript">
     function func1() {
-    document.getElementById("inpt").style.backgroundcolor = "yellow";
+    document.getElementsByClassName('box').style.backgroundColor = 'yellow';
     }
+
     function func2() {
-        document.getElementById("inpt").style.backgroundcolor = "white";
-    }
-    document.getElementById("inpt").onblur = func2;
-    document.getElementById("inpt").onfocus = func1;
+    document.getElementsByClassName('box').style.backgroundColor = 'white';
+    };
 </script>
 </head>
-<body onload="func1()">
+<body onload='func1() func2()' >
 <form action="Login_page.html" method="post">
     Username <br>
-    <input type="text" name="username" class="box" id="inpt"
-
-           onBlur='func2()'/>
+    <input type="text" name="username" class="box" id="inpt" onfocus="func1()" onblur="func2()"/>
     <br><br>
     Password <br>
     <input type="password" name="password" class="box" />
