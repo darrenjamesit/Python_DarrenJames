@@ -6,7 +6,7 @@ app = Flask('HydroGas SRL')
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home_ex2.html')
+    return render_template('home_ex2.html') + 'Welcome! This page is under construction'
 
 
 @app.route('/portfolio')
