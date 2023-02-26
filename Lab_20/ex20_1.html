@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <title>Ex20_1</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript">
+    <script>
     function func1() {
-    document.getElementsByClassName('box').style.backgroundColor = 'yellow';
-    }
+    element.style.backgroundColor = 'yellow';
+    };
 
     function func2() {
-    document.getElementsByClassName('box').style.backgroundColor = 'white';
+    element.style.backgroundColor = 'white';
     };
+    document.getElementById('inpt').onfocus = func1();
+    document.getElementById('pass').onfocus = func1();
+    document.getElementById('inpt').onblur = func2();
+    document.getElementById('pass').onblur = func2();
+
+    function start(){
+    func1();
+    func2();
+    }
 </script>
 </head>
-<body onload='func1() func2()' >
+<body onload='start()' >
 <form action="Login_page.html" method="post">
     Username <br>
-    <input type="text" name="username" class="box" id="inpt" onfocus="func1()" onblur="func2()"/>
+    <input type="text" name="username" class="box" id="inpt"/>
     <br><br>
     Password <br>
-    <input type="password" name="password" class="box" />
+    <input type="password" name="password" class="box" id="pass"/>
     <br> <br>
     <input type="checkbox" name="agree" /> I agree with terms and conditions bla bla
     <br><br>
