@@ -1,11 +1,12 @@
 from flask import Flask, render_template
+
 app = Flask('HydroGas SRL')
 
 
 @app.route('/')
 @app.route('/home')
 def home():
-    return 'Welcome! This page is under construction'
+    return render_template('')
 
 
 @app.route('/portfolio')
