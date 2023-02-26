@@ -1,0 +1,6 @@
+.dv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This is optional and sets the container height to the full height of the viewport */
+}
