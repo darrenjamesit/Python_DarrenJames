@@ -6,12 +6,12 @@ app = Flask('HydroGas SRL')
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home_ex2.html') + 'Welcome! This page is under construction'
+    return render_template('home.html')
 
 
 @app.route('/portfolio')
 def port():
-    return 'Coming soon.'
+    return render_template('portfolio.html')
 
 
 if __name__ == '__main__':
