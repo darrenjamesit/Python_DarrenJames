@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Fasttrack IT</title>
+    {% endif %}
+    <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Fast Track IT</h1>
+<hr>
+{% block content %}{% endblock %}
+</body>
+</html>
