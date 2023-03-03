@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+<body>
+<div>
+    Student data
+    <br> <br>
+</div>
+{% if stud_id in students.keys() %}
+<table class="tb">
+    {% for id, sub_dict in students.items() %}
+    {% if id == stud_id %}
+    <tr>
+        <td>
+            <b>
+                Surname
+            </b>
+        </td>
+        <td>
+            {{ sub_dict['lname'] }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>
+                First Name
+            </b>
+        </td>
+        <td>
+            {{ sub_dict['fname'] }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>
+                Class
+            </b>
+        </td>
+        <td>
+            {{ sub_dict['class'] }}
+        </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
+{% else %}
+<div>
+    This student does not exist.
+</div>
+{% endif %}
+
+<div>
+    <a href=/students/">List of Students</a>
+</div>
+</body>
+{% endblock content %}
