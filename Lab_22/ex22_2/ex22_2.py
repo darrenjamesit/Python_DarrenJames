@@ -25,5 +25,10 @@ def student(stud_id):
     return render_template('stud_id.html', students=st, stud_id=stud_id)
 
 
+@app.route('/class/<class_name>')
+def clas(class_name):
+    return render_template('class.html', students=st, class_name=class_name)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
