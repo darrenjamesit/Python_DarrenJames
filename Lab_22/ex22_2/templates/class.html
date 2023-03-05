@@ -2,51 +2,33 @@
 {% block content %}
 <body>
 <div>
-    Student data
+    Students in Class {{ class_name }}
     <br> <br>
 </div>
-{% if class_name in students.values()[2] %}
 <table class="tb">
     {% for id, sub_dict in students.items() %}
-    {% if id == stud_id %}
+    {% if class_name in sub_dict['class'] %}
+    {% if class_name == sub_dict['class'] %}
     <tr>
         <td>
             <b>
-                Surname
+                Name
             </b>
-        </td>
-        <td>
-            {{ sub_dict['lname'] }}
         </td>
     </tr>
     <tr>
         <td>
-            <b>
-                First Name
-            </b>
-        </td>
-        <td>
-            {{ sub_dict['fname'] }}
+            {{ sub_dict['fname'] }} {{ sub_dict['lname'] }}
         </td>
     </tr>
-    <tr>
-        <td>
-            <b>
-                Class
-            </b>
-        </td>
-        <td>
-            {{ sub_dict['class'] }}
-        </td>
-    </tr>
-    {% endif %}
-    {% endfor %}
 </table>
 {% else %}
-<div>
-    This student does not exist.
+<div id="no_class">
+    This class does not exist.
 </div>
 {% endif %}
+{% endif %}
+{% endfor %}
 <br>
 <div>
     <a href="/students/">List of Students</a>
