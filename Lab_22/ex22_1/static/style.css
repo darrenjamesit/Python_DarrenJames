@@ -5,3 +5,8 @@ border: solid 1px black;
 td, th {
 border: solid 1px black;
 }
+
+#no_stud {
+color: red;
+font-weight: bold;
+}
