@@ -18,7 +18,11 @@
                 {{ sub_dict['fname'] }} {{ sub_dict['lname'] }}
             </a>
         </td>
-        <td id="2">{{ sub_dict['class'] }}</td>
+        <td id="2">
+            <a href="/class/{{id}}">
+                {{ sub_dict['class'] }}
+            </a>
+        </td>
     </tr>
     {% endfor %}
     </tbody>
