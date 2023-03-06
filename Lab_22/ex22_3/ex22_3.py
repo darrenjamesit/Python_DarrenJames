@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask('Students')
 
 st = {
@@ -30,6 +30,14 @@ def student(stud_id):
 @app.route('/class/<class_name>')
 def clas(class_name):
     return render_template('class.html', students=st, class_name=class_name, x=x, y=y)
+
+
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    print(request.form)
+    print(dict(request.form))
+    print(request.form.get('fname'))
+    return render_template('search.html', search=request.form)
 
 
 if __name__ == '__main__':
