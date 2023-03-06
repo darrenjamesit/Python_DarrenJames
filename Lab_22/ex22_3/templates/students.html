@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+<body>
+<div>
+    List of students:
+    <br> <br>
+</div>
+<table class="tb">
+    <tr>
+        <th>Name</th>
+        <th>Class</th>
+    </tr>
+    <tbody>
+    {% for id, sub_dict in students.items() %}
+    <tr>
+        <td id="1">
+            <a href="/student/{{id}}">
+                {{ sub_dict['fname'] }} {{ sub_dict['lname'] }}
+            </a>
+        </td>
+        <td id="2">
+            <a href="/class/{{ sub_dict['class'] }}">
+                {{ sub_dict['class'] }}
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<hr>
+<form>
+    <input type="text" placeholder="search">
+    <br>
+    <input type="submit" name="Submit">
+</form>
+<br>
+<div>
+    <a href="/home/">Main Page</a>
+</div>
+</body>
+{% endblock content %}
