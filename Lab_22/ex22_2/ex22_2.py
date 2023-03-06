@@ -7,6 +7,8 @@ st = {
     31: {'fname': 'Gelu', 'lname': 'Ionescu', 'class': '10c'},
     15: {'fname': 'Geta', 'lname': 'Ionescu', 'class': '9b'},
 }
+x = list(st.values())
+y = [d['class'] for d in x]
 
 
 @app.route('/')
@@ -27,7 +29,7 @@ def student(stud_id):
 
 @app.route('/class/<class_name>')
 def clas(class_name):
-    return render_template('class.html', students=st, class_name=class_name)
+    return render_template('class.html', students=st, class_name=class_name, x=x, y=y)
 
 
 if __name__ == '__main__':
