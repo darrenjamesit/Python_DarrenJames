@@ -9,6 +9,8 @@ st = {
 }
 x = list(st.values())
 y = [d['class'] for d in x]
+fnam = [e['fname'] for e in x]
+lnam = [f['lname'] for f in x]
 
 
 @app.route('/')
@@ -32,12 +34,13 @@ def clas(class_name):
     return render_template('class.html', students=st, class_name=class_name, x=x, y=y)
 
 
-@app.route('/search', methods=['GET', 'POST'])
+@app.route('/search/', methods=['GET', 'POST'])
 def search():
     print(request.form)
     print(dict(request.form))
     print(request.form.get('fname'))
-    return render_template('search.html', search=request.form)
+    print(request.form.get('lname'))
+    return render_template('search.html', search=request.form, students=st, fnam=fnam, lnam=lnam)
 
 
 if __name__ == '__main__':
