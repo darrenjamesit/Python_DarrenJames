@@ -1,37 +1,44 @@
 {% extends "layout.html" %}
 {% block content %}
 <body>
+{% if class_name in y %}
 <div>
     Students in Class {{ class_name }}
     <br> <br>
 </div>
-<table class="tb">
-    {% for id, sub_dict in students.items() %}
-    {% if class_name in sub_dict['class'] %}
-    {% if class_name == sub_dict['class'] %}
-    <tr>
-        <td>
-            <b>
-                Name
-            </b>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            {{ sub_dict['fname'] }} {{ sub_dict['lname'] }}
-        </td>
-    </tr>
-</table>
+<div>
+    <table class="tb">
+        <tr>
+            <td>
+                <b>
+                    Name
+                </b>
+            </td>
+        </tr>
+        {% for id, sub_dict in students.items() %}
+        {% if class_name == sub_dict['class'] %}
+        <tr>
+            <td>
+                {{ sub_dict['fname'] }} {{ sub_dict['lname'] }}
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+
+</div>
+
 {% else %}
 <div id="no_class">
     This class does not exist.
 </div>
 {% endif %}
-{% endif %}
-{% endfor %}
+
+
 <br>
 <div>
     <a href="/students/">List of Students</a>
 </div>
+
 </body>
 {% endblock content %}
