@@ -5,10 +5,8 @@
     Student data
     <br> <br>
 </div>
-{% if stud_id in students.keys() %}
+{% if student %}
 <table class="tb">
-    {% for id, sub_dict in students.items() %}
-    {% if id == stud_id %}
     <tr>
         <td>
             <b>
@@ -16,7 +14,7 @@
             </b>
         </td>
         <td>
-            {{ sub_dict['lname'] }}
+            {{ student['lname'] }}
         </td>
     </tr>
     <tr>
@@ -26,7 +24,7 @@
             </b>
         </td>
         <td>
-            {{ sub_dict['fname'] }}
+            {{ student['fname'] }}
         </td>
     </tr>
     <tr>
@@ -36,11 +34,9 @@
             </b>
         </td>
         <td>
-            {{ sub_dict['class'] }}
+            {{ student['class'] }}
         </td>
     </tr>
-    {% endif %}
-    {% endfor %}
 </table>
 {% else %}
 <div id="no_stud">

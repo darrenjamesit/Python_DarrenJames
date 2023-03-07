@@ -22,7 +22,7 @@ def all_students():
 
 @app.route('/student/<int:stud_id>')
 def student(stud_id):
-    return render_template('stud_id.html', students=st, stud_id=stud_id)
+    return render_template('stud_id.html', student=st.get(stud_id))
 
 
 if __name__ == '__main__':
